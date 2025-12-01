@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Doctor AI - Your intelligent medical assistant for health consultations and doctor recommendations">
+    <title>Doctor AI - Medical Assistant</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="32" height="32" rx="8" fill="url(#gradient)"/>
+                    <path d="M16 8V24M8 16H24" stroke="white" stroke-width="3" stroke-linecap="round"/>
+                    <defs>
+                        <linearGradient id="gradient" x1="0" y1="0" x2="32" y2="32">
+                            <stop offset="0%" stop-color="#667eea"/>
+                            <stop offset="100%" stop-color="#764ba2"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <h1>Doctor AI</h1>
+            </div>
+            <button class="new-chat-btn" id="newChatBtn">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 4V16M4 10H16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                New Chat
+            </button>
+        </header>
+
+        <!-- Main Chat Area -->
+        <main class="chat-container">
+            <!-- Welcome Screen -->
+            <div class="welcome-screen" id="welcomeScreen">
+                <div class="welcome-content">
+                    <div class="welcome-icon">
+                        <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="40" cy="40" r="40" fill="url(#welcomeGradient)"/>
+                            <path d="M40 20V60M20 40H60" stroke="white" stroke-width="4" stroke-linecap="round"/>
+                            <defs>
+                                <linearGradient id="welcomeGradient" x1="0" y1="0" x2="80" y2="80">
+                                    <stop offset="0%" stop-color="#667eea"/>
+                                    <stop offset="100%" stop-color="#764ba2"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <h2>Welcome to Doctor AI</h2>
+                    <p>Your intelligent medical assistant for health consultations</p>
+                    <div class="features">
+                        <div class="feature">
+                            <div class="feature-icon">💬</div>
+                            <div class="feature-text">
+                                <h3>Symptom Analysis</h3>
+                                <p>Describe your symptoms and get AI-powered insights</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">👨‍⚕️</div>
+                            <div class="feature-text">
+                                <h3>Doctor Recommendations</h3>
+                                <p>Find specialized doctors near your location</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <div class="feature-icon">⚡</div>
+                            <div class="feature-text">
+                                <h3>Emergency Detection</h3>
+                                <p>Immediate alerts for critical conditions</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="disclaimer">
+                        <strong>⚠️ Medical Disclaimer:</strong> This AI provides general health information only and is not a substitute for professional medical advice. Always consult with a qualified healthcare provider.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chat Messages -->
+            <div class="messages" id="messages"></div>
+
+            <!-- Typing Indicator -->
+            <div class="typing-indicator" id="typingIndicator">
+                <div class="typing-dot"></div>
+                <div class="typing-dot"></div>
+                <div class="typing-dot"></div>
+            </div>
+        </main>
+
+        <!-- Input Area -->
+        <footer class="input-container">
+            <div class="input-wrapper">
+                <textarea 
+                    id="messageInput" 
+                    placeholder="Describe your symptoms..." 
+                    rows="1"
+                    maxlength="500"
+                ></textarea>
+                <button class="send-btn" id="sendBtn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22 2L11 13M22 2L15 22L11 13M22 2L2 9L11 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="input-hint">
+                Press Enter to send, Shift + Enter for new line
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
